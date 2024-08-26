@@ -1,30 +1,4 @@
-#include <stdio.h>
-#include <assert.h>
-#include <math.h>
-#include <unistd.h>
-const int INF_ROOTS = 3;
-const int NO_ROOTS = 0;
-const int ONE_ROOT = 1;
-const int TWO_ROOTS = 2;
-struct TestData
-{
-    int nTest;
-    double a, b, c;
-    double x1e, x2e;
-    int N_rootsE;
-};
-/*struct TestData data[] = {
-                             {1, 1, 0, -4, 2, -2, TWO_ROOTS},
-                             {2, 0, 0, 0, 0, 0, INF_ROOTS},
-                             {3, 0, 2, -4, 2, 0, ONE_ROOT},
-                             {4, 1, 0, 1, 0, 0, NO_ROOTS}
-                         };  */
-int Square_Solve(double a,double b,double c,double* x1,double* x2);
-int RunTests(TestData test1);
-int IsZero(double a);
-int RunTests();
-int IsEqual(double a,double b);
-
+#include "HeaderData.h"
 int main(){
 
     printf("SquareSolver\n");
@@ -40,7 +14,7 @@ int main(){
         res = scanf("%lg %lg %lg/n",&a, &b, &c);
         getchar();
         fflush(stdin);
-        printf("error, enter correct a,b,c\n");
+        printf("error, enter correct a, b, c\n");         /*два раза работает принтф (пофиксить)*/
 
     }
 

@@ -1,12 +1,4 @@
-#include <stdio.h>
-#include <assert.h>
-#include <math.h>
-const int INF_ROOTS = 3;
-const int NO_ROOTS = 0;
-const int ONE_ROOT = 1;
-const int TWO_ROOTS = 2;
-int IsZero(double a);
-int IsEqual(double a,double b);
+#include "HeaderData.h"
 int Square_Solve(double a,double b,double c,double* x1,double* x2)
 {
 

@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <math.h>
+#include "HeaderData.h"
 int IsZero(double a)
 {
     double eps = 0.00001;
