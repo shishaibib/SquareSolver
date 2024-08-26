@@ -11,10 +11,10 @@ int main(){
     while(res != 3)
     {
 
-        res = scanf("%lg %lg %lg/n",&a, &b, &c);
         getchar();
+        printf("error, enter correct a, b, c\n");
         fflush(stdin);
-        printf("error, enter correct a, b, c\n");         /*два раза работает принтф (пофиксить)*/
+        res = scanf("%lg %lg %lg/n",&a, &b, &c);
 
     }
 
