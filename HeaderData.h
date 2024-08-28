@@ -1,22 +1,24 @@
+#ifndef HEADER_DATA_H
+#define HEADER_DATA_H
+
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
-#include <unistd.h>
-const int NTESTS = 6;
-const int INF_ROOTS = 3;
-const int NO_ROOTS = 0;
-const int ONE_ROOT = 1;
-const int TWO_ROOTS = 2;
-struct TestData
+
+enum NUMBER_OF_ROOTS
 {
-    int nTest;
-    double a, b, c;
-    double x1e, x2e;
-    int N_rootsE;
+    NO_ROOTS = 0,
+    ONE_ROOT = 1,
+    TWO_ROOTS = 2,
+    INF_ROOTS = 3
 };
 
-int Square_Solve(double a,double b,double c,double* x1,double* x2);
-int RunTests(TestData test1);
-int IsZero(double a);
+int SolveSquare(double a,double b,double c,double* x1,double* x2);
+bool IsZero(double a);
 int RunTests();
-int IsEqual(double a,double b);
+bool IsEqual(double a,double b);
+int CleanInput();
+int ScanCoefficients(double *a, double *b, double *c);
+int PrintRoots(int n_roots, double x1, double x2);
+#endif
+
